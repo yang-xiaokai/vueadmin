@@ -1,6 +1,7 @@
 package com.vueadmin.entity;
 
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -14,6 +15,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
+@TableName(value = "sys_role")
 public class SysRole extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
@@ -24,5 +26,31 @@ public class SysRole extends BaseEntity {
 
     private String remark;
 
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
 }
